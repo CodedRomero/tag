@@ -15,9 +15,13 @@ class _AuthpageState extends State<Authpage> {
   TextEditingController password = TextEditingController();
 
   signInFunction(ctx) {
+    // Navigator.of(context).pushNamed('/home');
     if (username.text.isNotEmpty && password.text.isNotEmpty) {
       // final authBody = {'username': "Mantee", 'password': 'tamoah@gmail.com'};
-      final authBody = {'username': username.text, 'password': password.text};
+      final authBody = {
+        'username': username.text.trim(),
+        'password': password.text.trim()
+      };
 
       FormData formData = new FormData.fromMap(authBody);
       LogicServices().authenticateUser(authBody);
@@ -44,36 +48,13 @@ class _AuthpageState extends State<Authpage> {
               children: [
                 // Top Header with Icon
 
-                // Container(
-                //   height: 200,
-                //   decoration: const BoxDecoration(
-                //     color: Colors.blueAccent,
-                //     borderRadius: BorderRadius.only(
-                //       bottomLeft: Radius.circular(50),
-                //       bottomRight: Radius.circular(50),
-                //     ),
-                //   ),
-                //   child: const Column(
-                //     mainAxisAlignment: MainAxisAlignment.center,
-                //     children: [
-                //       Icon(
-                //         Icons.rocket_launch_rounded,
-                //         size: 80,
-                //         color: Colors.white,
-                //       ),
-                //       SizedBox(height: 10),
-                //       Text(
-                //         "Spacer",
-                //         style: TextStyle(
-                //           fontSize: 30,
-                //           fontWeight: FontWeight.bold,
-                //           color: Colors.white,
-                //         ),
-                //       ),
-                //     ],
-                //   ),
-                // ),
-                const SizedBox(height: 30),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/officialogo.png'),
+                  ],
+                ),
+                const SizedBox(height: 10),
 
                 // Create your account text
                 const Text(

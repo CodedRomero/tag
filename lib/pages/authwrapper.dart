@@ -20,7 +20,7 @@ class _AuthWrapperState extends State<AuthWrapper> {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
-            child: const CircularProgressIndicator.adaptive(),
+            child: CircularProgressIndicator.adaptive(),
           );
         }
         if (snapshot.data == true) {
