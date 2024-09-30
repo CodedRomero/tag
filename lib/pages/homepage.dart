@@ -17,7 +17,11 @@ class _HomepageState extends State<Homepage> {
         automaticallyImplyLeading: false,
         title: const Text('TAG Departments'),
         actions: [
-          TextButton(onPressed: () {}, child: const Text('New')),
+          TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/new');
+              },
+              child: const Text('New')),
           TextButton(
               onPressed: () {
                 Navigator.of(context).pop();

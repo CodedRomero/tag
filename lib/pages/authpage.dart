@@ -15,25 +15,25 @@ class _AuthpageState extends State<Authpage> {
   TextEditingController password = TextEditingController();
 
   signInFunction(ctx) {
-    // Navigator.of(context).pushNamed('/home');
-    if (username.text.isNotEmpty && password.text.isNotEmpty) {
-      // final authBody = {'username': "Mantee", 'password': 'tamoah@gmail.com'};
-      final authBody = {
-        'username': username.text.trim(),
-        'password': password.text.trim()
-      };
+    Navigator.of(context).pushNamed('/home');
+    // if (username.text.isNotEmpty && password.text.isNotEmpty) {
+    //   // final authBody = {'username': "Mantee", 'password': 'tamoah@gmail.com'};
+    //   final authBody = {
+    //     'username': username.text.trim(),
+    //     'password': password.text.trim()
+    //   };
 
-      FormData formData = new FormData.fromMap(authBody);
-      LogicServices().authenticateUser(authBody);
-    } else {
-      QuickAlert.show(
-        context: ctx,
-        type: QuickAlertType.error,
-        title: 'Oops...',
-        text: 'Username and password are required',
-        // text: 'Sorry, something went wrong',
-      );
-    }
+    //   FormData formData = new FormData.fromMap(authBody);
+    //   LogicServices().authenticateUser(authBody);
+    // } else {
+    //   QuickAlert.show(
+    //     context: ctx,
+    //     type: QuickAlertType.error,
+    //     title: 'Oops...',
+    //     text: 'Username and password are required',
+    //     // text: 'Sorry, something went wrong',
+    //   );
+    // }
   }
 
   @override

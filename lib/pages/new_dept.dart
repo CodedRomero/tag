@@ -10,6 +10,10 @@ class NewDept extends StatefulWidget {
 class _NewDeptState extends State<NewDept> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Department Details'),
+      ),
+    );
   }
 }

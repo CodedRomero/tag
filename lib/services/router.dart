@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tag/pages/authpage.dart';
 import 'package:tag/pages/homepage.dart';
+import 'package:tag/pages/new_dept.dart';
 
 import '../pages/authwrapper.dart';
 
@@ -17,6 +18,9 @@ class RouteGenerator {
 
       case '/home':
         return MaterialPageRoute(builder: (_) => const Homepage());
+
+      case '/new':
+        return MaterialPageRoute(builder: (_) => const NewDept());
     }
 
     return MaterialPageRoute(builder: (_) => const AuthWrapper());
